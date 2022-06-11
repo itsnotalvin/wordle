@@ -1,54 +1,19 @@
-.guessing1 {
-   display: grid; 
-   background-color: #2196F3;
-   grid-template-columns: auto auto auto auto auto;
-   padding:20px;
-   border: 5px solid black;
+
+
+
+.letterInput {
+    min-height: 69px;
+    min-width: 69px;
+    border: 3px solid black;
 }
 
-.guessing2 {
-    display: grid; 
-    background-color: #2196F3;
-    grid-template-columns: auto auto auto auto auto;
-    padding:20px;
-    border: 5px solid black;
- }
-
- .guessing3 {
-    display: grid; 
-    background-color: #2196F3;
-    grid-template-columns: auto auto auto auto auto;
-    padding:20px;
-    border: 5px solid black;
- }
-
- .guessing4 {
-    display: grid; 
-    background-color: #2196F3;
-    grid-template-columns: auto auto auto auto auto;
-    padding:20px;
-    border: 5px solid black;
- }
-
- .guessing5 {
-    display: grid; 
-    background-color: #2196F3;
-    grid-template-columns: auto auto auto auto auto;
-    padding:20px;
-    border: 5px solid black;
- }
- 
-.guessing-letter {
-    background-color: darkblue;
-    border: 1px solid yellow;
-    padding: 20px;
-    height: 69px;
-    width: 69px;
-    text-align: center;
-    font-size: 32px;
+.letterRow {
+    border: 3px solid black;
 }
 
-
+.guessContainer {
+    width: 100%;
+}
 
 
 

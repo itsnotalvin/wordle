@@ -16,23 +16,30 @@ const chosenWord = randomWord(words);
 console.log(chosenWord);
 
 
-// Create actual game boxes
+// Create actual letter boxes
 // https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Traversing_an_HTML_table_with_JavaScript_and_DOM_Interfaces
 
-function bootGame () {
+function createGame () {
+    let guessContainer = document.getElementById('guessContainer');
+
     for (let i = 0; i < 5; i++) {
         const rowbox = document.createElement('div');
+        rowbox.className = 'letterRow'
         
         for (let i= 0; i < 5; i++) {
             const columnbox = document.createElement('div');
+            columnbox.className = 'letterInput'
             
-            rowbox.appendChild()
+            rowbox.appendChild(columnbox);
 
         }
+
+        guessContainer.appendChild(rowbox);
 
     }
 }
 
+createGame()
 
 
 
