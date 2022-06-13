@@ -20,7 +20,7 @@ console.log(chosenWord);
 // https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Traversing_an_HTML_table_with_JavaScript_and_DOM_Interfaces
 
 function createGame () {
-    let guessContainer = document.getElementById('guessContainer');
+    let guessContainer = document.getElementById('gameContainer');
 
     for (let i = 0; i < 5; i++) {
         const rowbox = document.createElement('div');
@@ -43,23 +43,76 @@ createGame()
 
 
 
+// set amount of guesses
+const guessAllowed = 5;
+// set position to start at
+let currentLetter = 0;
+
+// move from position one to next
+// currentLetter ++1
+// each letter you input = currentletter+1
+// 
+let guess = '';
+
+
 // adding input from keyboard to game
+
+
 
 document.addEventListener('keyup', function(e) {
     let keyInput = String(e.key);
-
+    
 
     function userInput(keyInput) {
         let inputBox = document.getElementsByClassName('letterInput');
+        inputBox[currentLetter].textContent = keyInput;
+        currentLetter = currentLetter + 1;
 
-        inputBox.textcontent = keyInput;  
+        // add keyinput into guess string
+        guess = guess + keyInput;
+        
+        if (currentLetter%5 === 0) {
+            console.log(guess);
+            //run match
+            // .match with guess + chosenWord
+            if (guess === chosenWord) {
+                console.log('you are right')
+            }
+            
+            else {guess = ''}
+            
+
+        }
+        
+
+
+        // if currentLetter is 5, check answer && set currentLetter to 0;
+        // if (currentLetter = 5;
+
+        
+        
+        
+        // )
+
+        //combine all 5 inputs into a string
+       
+
+        // console.log(arrInputBox[0]);
+    
+        // stop currentLetter at 5
+        
+        // inputBox.textContent = keyInput;
+
+        
+  
     }
+
     // check letter vs input
-    let letterCheck = keyInput.match(/a-z/);
+        // let letterCheck = keyInput.match(/a-z/);
 
-    userInput(keyInput)
+    userInput(keyInput);
 
-    console.log('pressed', keyInput)
+    console.log('pressed', keyInput);
     }
     // check if backspace
 
@@ -67,7 +120,7 @@ document.addEventListener('keyup', function(e) {
 
     // check if special char *&%$#@!
 
-    // receive input
+    // 
    
 )
 
