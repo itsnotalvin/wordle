@@ -1,5 +1,8 @@
 
-
+.guessContainer {
+    flex-direction: column;
+    display: flex;
+}
 
 .letterInput {
     min-height: 69px;
@@ -8,6 +11,9 @@
     border-radius: 3px;
     font-size:2em;
     margin: 6px;
+    display: flex;
+    justify-items: center;
+    align-items: center;
 }
 
 .letterRow {
@@ -15,82 +21,54 @@
 }
 
 
-.guessContainer {
-    flex-direction: column;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* #keyboard-container {
     display: flex;
-}
-
-
-
-
-
-
-
-
-
-
-#keyboard-container {
-    justify-content: center;
-   
-    display: block;
-    width: 100%;
-    margin: 0auto 8px;
     
-}
+} */
 
-.row {
+.keyboard {
+   display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
+    align-items: center;
+    margin: 1em 1em;
     justify-content: center;
 }
 
-#spacebar {
-    width: 16em;
-}
 
-
-
-.row {
-    justify-content: center;
-}
-
-#row-0 {
-    flex-wrap: wrap;
-    justify-content: space-evenly;
+/* #row-0 {
+    
 }
 
 #row-1 {
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    align-items: center;
-    padding-left: 5%;
-    padding-right: 5%;
+   
 } 
 
 #row-2 {
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    padding-left: 10%;
-    padding-right: 10%;
     
-}
+    
+} */
 
-#row-3 {
-    padding-left: 10%;
-    padding-right: 10%;
-    
-    
-}
 
 .key {
-    width: 4vw;
-    height: 4vw;
-    margin: 3px;
+    padding: 0.5em;
+    margin: 0 3px;
+    text-transform: uppercase;
+    font-size: 1em;
 
 } 
-
-#output {
-    display: block;
-    align-items: center;
-}

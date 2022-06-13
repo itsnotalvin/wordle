@@ -43,21 +43,33 @@ createGame()
 
 
 
+// adding input from keyboard to game
 
-let output = document.getElementById('output');
-let keys = document.getElementsByClassName('key');
-for (let keyElement of keys) {
-    let key = keyElement.textContent;
-    keyElement.addEventListener('click', function() {
-        switch (key) {
-            // case '␡':
-            //     output.textContent = output.textContent.slice(0, output.textContent.length-1);
-            //     break;
-            case '␡ all':
-                output.textContent = '';
-                break;
-            default:
-                output.textContent += key;
-        }
-    });
-}
+document.addEventListener('keyup', function(e) {
+    let keyInput = String(e.key);
+
+
+    function userInput(keyInput) {
+        let inputBox = document.getElementsByClassName('letterInput');
+
+        inputBox.textcontent = keyInput;  
+    }
+    // check letter vs input
+    let letterCheck = keyInput.match(/a-z/);
+
+    userInput(keyInput)
+
+    console.log('pressed', keyInput)
+    }
+    // check if backspace
+
+    // check if number
+
+    // check if special char *&%$#@!
+
+    // receive input
+   
+)
+
+
+
