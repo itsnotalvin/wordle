@@ -47,7 +47,7 @@ createGame()
 const guessAllowed = 5;
 // set position to start at
 let currentLetter = 0;
-
+ let previousLetter = currentLetter - 1;
 // move from position one to next
 // currentLetter ++1
 // each letter you input = currentletter+1
@@ -61,15 +61,40 @@ let guess = '';
 
 document.addEventListener('keyup', function(e) {
     let keyInput = String(e.key);
-    
 
+    
+    
     function userInput(keyInput) {
         let inputBox = document.getElementsByClassName('letterInput');
+        
+        
+
+        // add keyinput into guess string
+        if (e.key == "Backspace") {
+           
+            guess = guess.slice(0,-1);
+            
+            inputBox[currentLetter-1].textContent = '';
+            currentLetter = currentLetter -1;
+        
+            return;
+        }
+
         inputBox[currentLetter].textContent = keyInput;
         currentLetter = currentLetter + 1;
 
-        // add keyinput into guess string
         guess = guess + keyInput;
+        
+        // backspace
+
+       
+        console.log(currentLetter);
+        // if (e.key == "Backspace") {
+        //     guess.slice(0,-1);
+        //     currentLetter = currentLetter -1;
+        //     inputBox[currentLetter].textContent = '';
+            
+        // } 
         
         if (currentLetter%5 === 0) {
             console.log(guess);
@@ -80,37 +105,26 @@ document.addEventListener('keyup', function(e) {
             }
             
             else {guess = ''}
-            
 
+        // end game alert   
+        if (currentLetter === 25 && guess !== chosenWord) {
+            
+            alert('the correct word was ' + chosenWord);
+        }
+
+        // 
+            
         }
         
-
-
-        // if currentLetter is 5, check answer && set currentLetter to 0;
-        // if (currentLetter = 5;
-
-        
-        
-        
-        // )
-
-        //combine all 5 inputs into a string
-       
-
-        // console.log(arrInputBox[0]);
-    
-        // stop currentLetter at 5
-        
-        // inputBox.textContent = keyInput;
+   
 
         
   
     }
 
-    // check letter vs input
-        // let letterCheck = keyInput.match(/a-z/);
 
     userInput(keyInput);
+    
 
     console.log('pressed', keyInput);
     }
@@ -124,5 +138,7 @@ document.addEventListener('keyup', function(e) {
    
 )
 
-
-
+// guess[2] === chosenword[2] 
+// return letter/animation change to colour
+// guess[2] === chosenword[2] 
+// return letter/animation change to colour
