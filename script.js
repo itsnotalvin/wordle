@@ -139,7 +139,7 @@ document.addEventListener('keyup', function(e) {
             guess = '';
             }
 
-        // end game alert   
+        // end game alert    
         if (currentLetter === 25 && guess !== chosenWord) {
             
             alert('the correct word was ' + chosenWord);
