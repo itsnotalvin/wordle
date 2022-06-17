@@ -99,9 +99,10 @@ document.addEventListener('keyup', function(e) {
             return;
         }
 
-        if (e.key == "Enter") {
-            wordCheck();
-        }
+        // if (e.key == "Enter") {
+        //     wordCheck();
+        //
+        // }
 
         // if key is not a single letter we return to function
         if (e.key.length >1) {
@@ -118,13 +119,10 @@ document.addEventListener('keyup', function(e) {
 
         guess = guess + keyInput;
         
-   
-       
+          
         console.log(currentLetter);
        
-            
-
-        
+                
         // old check function
         if (currentLetter%5 === 0) {
             console.log(guess);

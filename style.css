@@ -1,3 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+
+
+
 body {
     text-align: center;
     background-color: black;
@@ -20,8 +25,8 @@ h1 {
 }
 
 .letterInput {
-    min-height: 69px;
-    min-width: 69px;
+    min-height: 100px;
+    min-width: 100px;
     border: 3px solid lightgrey;
     border-radius: 3px;
     font-size:2em;
@@ -29,6 +34,7 @@ h1 {
     display: flex;
     justify-items: center;
     align-items: center;
+
 }
 
 .letterRow {
@@ -86,6 +92,9 @@ h1 {
     min-height: 50px;
     min-width: 250px;
     font-size: 30px;
+    background-color: cyan;
+    color: black;
+    font-family: inherit;
 }
 
 ul {
