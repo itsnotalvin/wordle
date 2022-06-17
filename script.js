@@ -59,7 +59,9 @@ let guess = '';
 
 // adding input from keyboard to game
 
-
+function newGame() {
+    window.location.reload();
+}
 
 document.addEventListener('keyup', function(e) {
     let keyInput = String(e.key);
@@ -90,13 +92,13 @@ document.addEventListener('keyup', function(e) {
         if (!e.key.match(/^[A-Z]+$/i)) {
             return;
         }
+
         inputBox[currentLetter].textContent = keyInput;
         currentLetter = currentLetter + 1;
 
         guess = guess + keyInput;
         
-    
-
+   
        
         console.log(currentLetter);
        
