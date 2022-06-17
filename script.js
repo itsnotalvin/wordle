@@ -83,34 +83,50 @@ document.addEventListener('keyup', function(e) {
         }
         // if key is not a single letter we return to function
         if (e.key.length >1) {
-            return
+            return;
         }
 
         // if key is not alphabetical
-        // if (e.key.match != /[A-Z]/gi) {
-        //     return;
-        // }
-
+        if (!e.key.match(/^[A-Z]+$/i)) {
+            return;
+        }
         inputBox[currentLetter].textContent = keyInput;
         currentLetter = currentLetter + 1;
 
         guess = guess + keyInput;
         
-        // backspace
+    
 
        
         console.log(currentLetter);
-        // if (e.key == "Backspace") {
-        //     guess.slice(0,-1);
-        //     currentLetter = currentLetter -1;
-        //     inputBox[currentLetter].textContent = '';
-            
-        // } 
+       
+           // FUNCTION TO MATCH
+        function wordMatch() {
+            if (guess === chosenWord) {
+                console.log('by god ur a genius you got this in ' + guessAllowed + ' guesses')
+            }
+            else {
+                guess = '';
+            }
+        }
 
-        if (guess < 5 && (e.key == 'Enter')) {
-            console.log(5-guess + ' more letters needed');
+       
+        // check if they press enter
+
+        if (keyInput === "Enter") {
+            // run wordMatch
+            wordMatch();
+            guessAllowed = guessAllowed - 1;
+            console.log(guessAllowed);
+            
+
+            
+            return;
         }
         
+
+        
+        // old check function
         if (currentLetter%5 === 0) {
             console.log(guess);
             //run match
@@ -119,7 +135,9 @@ document.addEventListener('keyup', function(e) {
                 console.log('you are right')
             }
             
-            else {guess = ''}
+            else {
+            guess = '';
+            }
 
         // end game alert   
         if (currentLetter === 25 && guess !== chosenWord) {
@@ -131,27 +149,16 @@ document.addEventListener('keyup', function(e) {
        
         // 
             
-        }
-        
-   
-
-        
-  
+        }    
     }
 
 
-    userInput(keyInput);
+        userInput(keyInput);
     
 
-    console.log('pressed', keyInput);
+        console.log('pressed', keyInput);
     }
-    // check if backspace
-
-    // check if number
-
-    // check if special char *&%$#@!
-
-    // 
+    
    
 )
 
