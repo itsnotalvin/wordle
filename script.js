@@ -140,9 +140,9 @@ document.addEventListener('keyup', function(e) {
                 guess = '';
                 return;
             }
-            else if (guess === chosenWord) {
-                for (i = 0; i < 4; i++) 
-                    inputBox[currentLetter-i].style.backgroundColor = "green";
+            if (guess === chosenWord) {
+                for (i = 0; i < 5; i++) 
+                    inputBox[currentLetter-1 -i].style.backgroundColor = "green";
                 alert('you are right');
                 return;
             }
@@ -150,6 +150,7 @@ document.addEventListener('keyup', function(e) {
         // end game alert    
             if (currentLetter === 25 && guess !== chosenWord) {
                 console.log('the correct word was ' + chosenWord);
+                
                 alert('the correct word was ' + chosenWord);
             }
 
@@ -201,6 +202,24 @@ document.addEventListener('keyup', function(e) {
             
         }    
     }
+    // add onscreen keyboard input
+    // const screenInput = this.getElementsByClassName('key');
+    // screenInput.addEventListener('click', function(e){
+    //     function pleaseenter() { 
+    //         inputBox[currentLetter].textContent = screenInput.textContent;
+    //         currentLetter = currentLetter + 1;
+    
+    //         guess = guess + screenInput.textContent;
+
+    //     }
+       
+
+    // })
+    
+
+
+
+
 
 
         userInput(keyInput);
