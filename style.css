@@ -2,6 +2,7 @@ body {
     text-align: center;
     background-color: black;
     color: white;
+    font-family: 'Open Sans', sans-serif;
 }
 
 h1 {
@@ -59,6 +60,7 @@ h1 {
     align-items: center;
     justify-content: center;
     margin: 0 auto;
+    font-family: inherit;
     
 }
 
@@ -88,5 +90,10 @@ h1 {
 ul {
     margin: 5px auto;
     display: inline-block;
-    text-align: left;    
+    text-align: left;
+}
+
+#rules {
+    font-size: 20px;
+    
 }
