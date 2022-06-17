@@ -132,11 +132,15 @@ document.addEventListener('keyup', function(e) {
             //run match
             // .match with guess + chosenWord
             if (guess === chosenWord) {
-                console.log('you are right')
+                console.log('you are right');
             }
             
             else {
-            guess = '';
+
+                wordCheck();
+
+                guess = '';
+                return;
             }
 
         // end game alert    
@@ -145,6 +149,17 @@ document.addEventListener('keyup', function(e) {
             alert('the correct word was ' + chosenWord);
         }
 
+        function wordCheck() {
+            if (guess[0] == chosenWord[0]) {
+                inputBox[currentLetter-5].style.backgroundColor = "green";        
+            } else if (chosenWord.includes(guess[0])) {
+                inputBox[currentLetter-5].style.backgroundColor = "yellow";
+            } else {
+                inputBox[currentLetter-5].style.backgroundColor = "lightgrey";
+            }
+        
+        
+        }
 
        
         // 
@@ -177,3 +192,4 @@ document.addEventListener('keyup', function(e) {
 // 
 
 // add keyboard click input 
+
