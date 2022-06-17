@@ -113,9 +113,8 @@ document.addEventListener('keyup', function(e) {
             }
 
         }
-
-        
-        
+     
+      
           
         console.log(currentLetter);
        
@@ -188,16 +187,8 @@ document.addEventListener('keyup', function(e) {
                     } else {
                         inputBox[currentLetter-1].style.backgroundColor = "lightgrey";
                     }
-            
                 }
-
-        }                
-        // old check function
-       
-
-       
-        // 
-            
+            }                
         }    
     }
 
@@ -217,9 +208,6 @@ document.addEventListener('keyup', function(e) {
 
     // })
     
-
-
-
         userInput(keyInput);
     
 
