@@ -142,58 +142,59 @@ document.addEventListener('keyup', function(e) {
             }
             else if (guess === chosenWord) {
                 for (i = 0; i < 4; i++) 
-                    inputBox[i].style.backgroundColor = "green";
+                    inputBox[currentLetter-i].style.backgroundColor = "green";
                 alert('you are right');
+                return;
             }
 
         // end game alert    
-        if (currentLetter === 25 && guess !== chosenWord) {
-            
-            alert('the correct word was ' + chosenWord);
-        }
-
-        function wordCheck() {
-            if (guess[0] == chosenWord[0]) {
-                inputBox[currentLetter-5].style.backgroundColor = "green";        
-            } else if (chosenWord.includes(guess[0])) {
-                inputBox[currentLetter-5].style.backgroundColor = "orange";
-            } else {
-                inputBox[currentLetter-5].style.backgroundColor = "lightgrey";
+            if (currentLetter === 25 && guess !== chosenWord) {
+                console.log('the correct word was ' + chosenWord);
+                alert('the correct word was ' + chosenWord);
             }
 
-            if (guess[1] == chosenWord[1]) {
-                inputBox[currentLetter-4].style.backgroundColor = "green";        
-            } else if (chosenWord.includes(guess[1])) {
-                inputBox[currentLetter-4].style.backgroundColor = "orange";
-            } else {
-                inputBox[currentLetter-4].style.backgroundColor = "lightgrey";
-            }
+            function wordCheck() {
+                if (guess[0] == chosenWord[0]) {
+                    inputBox[currentLetter-5].style.backgroundColor = "green";        
+                } else if (chosenWord.includes(guess[0])) {
+                    inputBox[currentLetter-5].style.backgroundColor = "orange";
+                } else {
+                    inputBox[currentLetter-5].style.backgroundColor = "lightgrey";
+                }
 
-            if (guess[2] == chosenWord[2]) {
-                inputBox[currentLetter-3].style.backgroundColor = "green";        
-            } else if (chosenWord.includes(guess[2])) {
-                inputBox[currentLetter-3].style.backgroundColor = "orange";
-            } else {
-                inputBox[currentLetter-3].style.backgroundColor = "lightgrey";
-            }
+                if (guess[1] == chosenWord[1]) {
+                    inputBox[currentLetter-4].style.backgroundColor = "green";        
+                } else if (chosenWord.includes(guess[1])) {
+                    inputBox[currentLetter-4].style.backgroundColor = "orange";
+                } else {
+                    inputBox[currentLetter-4].style.backgroundColor = "lightgrey";
+                }
 
-            if (guess[3] == chosenWord[3]) {
-                inputBox[currentLetter-2].style.backgroundColor = "green";        
-            } else if (chosenWord.includes(guess[3])) {
-                inputBox[currentLetter-2].style.backgroundColor = "orange";
-            } else {
-                inputBox[currentLetter-2].style.backgroundColor = "lightgrey";
-            }
+                if (guess[2] == chosenWord[2]) {
+                    inputBox[currentLetter-3].style.backgroundColor = "green";        
+                } else if (chosenWord.includes(guess[2])) {
+                    inputBox[currentLetter-3].style.backgroundColor = "orange";
+                } else {
+                    inputBox[currentLetter-3].style.backgroundColor = "lightgrey";
+                }
 
-            if (guess[4] == chosenWord[4]) {
-                inputBox[currentLetter-1].style.backgroundColor = "green";        
-            } else if (chosenWord.includes(guess[4])) {
-                inputBox[currentLetter-1].style.backgroundColor = "orange";
-            } else {
-                inputBox[currentLetter-1].style.backgroundColor = "lightgrey";
-            }
+                if (guess[3] == chosenWord[3]) {
+                    inputBox[currentLetter-2].style.backgroundColor = "green";        
+                } else if (chosenWord.includes(guess[3])) {
+                    inputBox[currentLetter-2].style.backgroundColor = "orange";
+                } else {
+                    inputBox[currentLetter-2].style.backgroundColor = "lightgrey";
+                }
+
+                if (guess[4] == chosenWord[4]) {
+                    inputBox[currentLetter-1].style.backgroundColor = "green";        
+                } else if (chosenWord.includes(guess[4])) {
+                    inputBox[currentLetter-1].style.backgroundColor = "orange";
+                } else {
+                    inputBox[currentLetter-1].style.backgroundColor = "lightgrey";
+                }
         
-        }
+            }
 
        
         // 
