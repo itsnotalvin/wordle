@@ -73,12 +73,12 @@ document.addEventListener('keyup', function(e) {
 
         // add keyinput into guess string
         if (e.key == "Backspace") {
-           
+        
             guess = guess.slice(0,-1);
             
             inputBox[currentLetter-1].textContent = '';
             currentLetter = currentLetter -1;
-        
+                   
             return;
         }
         // if key is not a single letter we return to function
@@ -100,29 +100,29 @@ document.addEventListener('keyup', function(e) {
        
         console.log(currentLetter);
        
-           // FUNCTION TO MATCH
-        function wordMatch() {
-            if (guess === chosenWord) {
-                console.log('by god ur a genius you got this in ' + guessAllowed + ' guesses')
-            }
-            else {
-                guess = '';
-            }
-        }
+        //    // FUNCTION TO MATCH
+        // function wordMatch() {
+        //     if (guess === chosenWord) {
+        //         console.log('by god ur a genius you got this in ' + guessAllowed + ' guesses')
+        //     }
+        //     else {
+        //         guess = '';
+        //     }
+        // }
 
        
         // check if they press enter
 
-        if (keyInput === "Enter") {
-            // run wordMatch
-            wordMatch();
-            guessAllowed = guessAllowed - 1;
-            console.log(guessAllowed);
+        // if (keyInput === "Enter") {
+        //     // run wordMatch
+        //     wordMatch();
+        //     guessAllowed = guessAllowed - 1;
+        //     console.log(guessAllowed);
             
 
             
-            return;
-        }
+        //     return;
+        // }
         
 
         
