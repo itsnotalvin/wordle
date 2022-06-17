@@ -50,6 +50,8 @@ const guessAllowed = 5;
 // set position to start at
 let currentLetter = 0;
 
+let allowInput = true;
+
 // move from position one to next
 // currentLetter ++1
 // each letter you input = currentletter+1
@@ -71,7 +73,20 @@ document.addEventListener('keyup', function(e) {
     function userInput(keyInput) {
         let inputBox = document.getElementsByClassName('letterInput');
         
-        
+        // if (guess.length == 5) {
+        //     allowInput = false;
+        //     if (allowInput = false) {
+
+
+        //     }
+        //     return;
+        // }
+
+        // if (guess.length %5 == 0) {
+
+
+        // }
+
 
         // add keyinput into guess string
         if (e.key == "Backspace") {
@@ -83,6 +98,11 @@ document.addEventListener('keyup', function(e) {
                    
             return;
         }
+
+        if (e.key == "Enter") {
+            wordCheck();
+        }
+
         // if key is not a single letter we return to function
         if (e.key.length >1) {
             return;
@@ -102,30 +122,7 @@ document.addEventListener('keyup', function(e) {
        
         console.log(currentLetter);
        
-        //    // FUNCTION TO MATCH
-        // function wordMatch() {
-        //     if (guess === chosenWord) {
-        //         console.log('by god ur a genius you got this in ' + guessAllowed + ' guesses')
-        //     }
-        //     else {
-        //         guess = '';
-        //     }
-        // }
-
-       
-        // check if they press enter
-
-        // if (keyInput === "Enter") {
-        //     // run wordMatch
-        //     wordMatch();
-        //     guessAllowed = guessAllowed - 1;
-        //     console.log(guessAllowed);
             
-
-            
-        //     return;
-        // }
-        
 
         
         // old check function

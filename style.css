@@ -16,6 +16,7 @@ h1 {
     background-color: lightgrey;
     margin: 0 auto;
     align-self: center;
+
 }
 
 .letterInput {
@@ -91,6 +92,7 @@ ul {
     margin: 5px auto;
     display: inline-block;
     text-align: left;
+    padding-bottom: 69px;
 }
 
 #rules {
