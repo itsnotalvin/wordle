@@ -43,11 +43,13 @@ createGame()
 
 
 
+// GLOBAL VARIABLES
+
 // set amount of guesses
 const guessAllowed = 5;
 // set position to start at
 let currentLetter = 0;
- let previousLetter = currentLetter - 1;
+
 // move from position one to next
 // currentLetter ++1
 // each letter you input = currentletter+1
@@ -79,6 +81,15 @@ document.addEventListener('keyup', function(e) {
         
             return;
         }
+        // if key is not a single letter we return to function
+        if (e.key.length >1) {
+            return
+        }
+
+        // if key is not alphabetical
+        // if (e.key.match != /[A-Z]/gi) {
+        //     return;
+        // }
 
         inputBox[currentLetter].textContent = keyInput;
         currentLetter = currentLetter + 1;
@@ -95,6 +106,10 @@ document.addEventListener('keyup', function(e) {
         //     inputBox[currentLetter].textContent = '';
             
         // } 
+
+        if (guess < 5 && (e.key == 'Enter')) {
+            console.log(5-guess + ' more letters needed');
+        }
         
         if (currentLetter%5 === 0) {
             console.log(guess);
@@ -112,6 +127,8 @@ document.addEventListener('keyup', function(e) {
             alert('the correct word was ' + chosenWord);
         }
 
+
+       
         // 
             
         }
@@ -142,3 +159,14 @@ document.addEventListener('keyup', function(e) {
 // return letter/animation change to colour
 // guess[2] === chosenword[2] 
 // return letter/animation change to colour
+
+
+
+
+// REMAINING STEPS
+// When enter check str ===5 && match index of guess vs chosenword
+// perform colour/hints
+// jump to next row
+// 
+
+// add keyboard click input 
