@@ -126,7 +126,6 @@ document.addEventListener('keyup', function(e) {
                 
                 
                if (guess !== chosenWord) {
-    
                     wordCheck();
                     allowInput = true;
                     guess = '';
