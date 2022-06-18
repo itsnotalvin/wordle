@@ -46,7 +46,7 @@ createGame()
 // GLOBAL VARIABLES
 
 // set amount of guesses
-const guessAllowed = 5;
+let guessAllowed = 5;
 // set position to start at
 let currentLetter = 0;
 
@@ -130,8 +130,14 @@ document.addEventListener('keyup', function(e) {
                     wordCheck();
                     allowInput = true;
                     guess = '';
+                    guessAllowed = guessAllowed - 1;
+                    console.log(guessAllowed);
+                    if (guessAllowed == 0) {
+                        alert('the correct word was ' + chosenWord);
+                    }
                     return;
                 }
+
                 if (guess === chosenWord) {
                     // for (i = 0; i < 5; i++) 
                     //     inputBox[currentLetter-1 -i].style.backgroundColor = "green";
@@ -140,7 +146,7 @@ document.addEventListener('keyup', function(e) {
                     return;
                 }
     
-            // end game alert    
+                // end game alert    
                 if (currentLetter === 25 && guess !== chosenWord) {
                     console.log('the correct word was ' + chosenWord);
                     
